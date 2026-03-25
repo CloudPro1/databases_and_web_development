@@ -14,6 +14,6 @@ login: accountant
 password: accountant \
 #3
 login: user
-password: user \
+ \password: user 
  
 Для каждого из этих пользователей доступны опреденные разделы сайта, соответсвуя бизнес-модели, подробности в РПЗ.
