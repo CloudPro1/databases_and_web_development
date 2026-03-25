@@ -5,15 +5,15 @@
 Используемые языки: Python, MySQL. Языки разметки: html, css.
 
 ------
-Вы можете войти в систему тремя способами:
-#1 \
+Вы можете войти в систему тремя способами: \
+#1 
 login: manager 
-password: manager
+password: manager \
 #2
 login: accountant
-password: accountant
+password: accountant \
 #3
 login: user
-password: user
-
+password: user \
+ 
 Для каждого из этих пользователей доступны опреденные разделы сайта, соответсвуя бизнес-модели, подробности в РПЗ.
