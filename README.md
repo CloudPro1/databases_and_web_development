@@ -6,15 +6,15 @@
 
 ------
 Вы можете войти в систему тремя способами: \
-#1 
+#1 \
 login: manager  \
 password: manager 
 
-#2
+#2 \
 login: accountant \
 password: accountant 
 
-#3
+#3 \
 login: user \
 password: user 
  
