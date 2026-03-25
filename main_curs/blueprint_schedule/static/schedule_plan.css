@@ -1,0 +1,161 @@
+
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+}
+
+
+
+.bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e7e7e7;
+    padding: 15px 25px;
+}
+
+/* .name-left {
+    font-size: 22px;
+    font-weight: bold;
+} */
+
+.btn {
+    padding: 15px 14px;
+    text-decoration: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-outline {
+    border: 3px solid #000;
+    color: #000;
+    font-weight: medium;
+}
+
+.btn-outline:hover {
+    background: #A063b3;
+    color: white;
+    transform: scale(1.05);
+}
+
+.btn-success {
+    background: #000;
+    color: white;
+}
+
+.btn-danger {
+    background: #000000;
+    color: white;
+    /* width: auto; */
+    margin-top: 10px;
+    display: inline-block;
+
+}
+
+/* .btn.full {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+} */
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.main {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.column.left {
+    width: 65%;
+}
+
+.column.right {
+    width: 35%;
+}
+
+.card {
+    background: white;
+    border: 2px solid #363536;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.card-header {
+    background: #A063b3;
+    color: white;
+    padding: 15px;
+    border-bottom: 2px solid #A063b3;
+}
+
+
+
+.alert {
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.alert-danger { background: #f8d7da; color: #842029; }
+.alert-success { background: #d1e7dd; color: #0f5132; }
+.alert-info    { background: #f4e9f8; color: #000; }
+
+.alert-close {
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.totals {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.green {
+    color: #a1f8ba;
+}
+
+.gray {
+    color: #666;
+}
+
+/* utils */
+
+.card-body {
+    padding: 15px;
+    display: flex;
+    /* gap: 50px;  */
+    justify-content: space-between;
+    
+}
+
+.product-card {
+    /* display: flex; */
+    border: 1px solid #9d8793;
+}
+
+.card-text {
+    margin-top: 40px;
+}
+
+form{
+    display: flex;
+    flex-direction: column; 
+    margin-top: 20px;
+    gap: 10px;
+    width: auto;
+    width: 300px;
+}
+
+

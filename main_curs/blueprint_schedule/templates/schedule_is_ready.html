@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Результаты отчёта</title>
+    <link rel="stylesheet" href="{{ url_for('bp_schedule.static', filename='shedule_is_ready.css') }}">
+</head>
+<body>
+    <main>
+        <div class="container">
+        <h2>Расписание на {{ date }}</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Водитель</th>
+                    <th>Маршрут</th>
+                    <th>Дата смены</th>
+                    <th>Начало смены</th>
+                    <th>Конец смены</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for report in reports %}
+                <tr>
+                    <td>{{ report.name }}</td>
+                    <td>{{ report.route_id }}</td>
+                    <td>{{ report.date_of_workday }}</td>
+                    <td>{{ report.work_start }}</td>
+                    <td>{{ report.work_finish }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="button-container">
+            <a href="/schedule/plan/" class="btn-back">Назад к формированию расписания</a>
+            <!-- <span> | </span> -->
+            <!-- <a href="/reports/" class="btn-back">Назад к отчётам</a> -->
+            <!-- <span> | </span> -->
+            <form action="{{ url_for('bp_schedule.save_schedule') }}" method="POST" style="display: inline;">
+            <button type="submit" class="btn-back">Опубликовать расписание</button>
+            </form>
+            <!-- <a href="/schedule/plan/sch_is_ready" class="btn-back">Опубликовать расписание</a> -->
+        </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main_menu.css') }}">
+</head>
+<body>
+    <div class="container">
+    <h2>Главное меню</h2>
+    <nav>
+        <div class="top-buttons">
+            <a href="/query/">Работа с запросами</a>
+            <a href="/reports/">Работа с отчетами</a>
+            <a href="/schedule/">Составление расписания</a>
+        </div>
+        <a href="/exit">Выход из системы</a>
+    </nav>
+    </div>
+</body>
+</html>

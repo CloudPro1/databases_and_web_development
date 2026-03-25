@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Результаты отчёта</title>
+    <link rel="stylesheet" href="{{ url_for('bp_report.static', filename='report_result.css') }}">
+</head>
+<body>
+<main>
+    <div class="container">
+        <h2>{{report_title}}</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID отчёта</th>
+                    <th>Водитель</th>
+                    <th>ID водителя</th>
+                    <th>Год</th>
+                    <th>Месяц</th>
+                    <th>Отработанные часы</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for report in reports %}
+                <tr>
+                    <td>{{report[0]}}</td>
+                    <td>{{report[1]}}</td>
+                    <td>{{report[2]}}</td>
+                    <td>{{report[3]}}</td>
+                    <td>{{report[4]}}</td>
+                    <td>{{report[5]}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="button-container">
+            <a href="/reports/accounting/show" class="btn-back">Назад к формированию отчета</a>
+            <!-- <span> | </span> -->
+            <a href="/reports/" class="btn-back">Назад к отчётам</a>
+            <!-- <span> | </span> -->
+            <a href="/" class="btn-back">На главную</a>
+        </div>
+    </div>
+</main>
+</body>
+</html>

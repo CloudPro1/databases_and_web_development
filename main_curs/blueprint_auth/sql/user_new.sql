@@ -1,0 +1,1 @@
+INSERT INTO internal_users(login, password, role) VALUES (%s, %s, %s);

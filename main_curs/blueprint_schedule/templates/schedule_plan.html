@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание водителей</title>
+    <link rel="stylesheet" href="{{ url_for('bp_schedule.static', filename='schedule_plan.css') }}">
+</head>
+<body>
+
+<div class="bar">
+    <h2>Расписание водителей</h2>
+    <h2>Дата: {{ date }}</h2>
+    <div class="nav-right">
+        <a href="{{ url_for('bp_schedule.choose_date') }}" class="btn btn-outline">К выбору даты</a>
+        <a href="{{ url_for('main_menu') }}" class="btn btn-outline">В главное меню</a>
+    </div>
+</div>
+
+{% import "schedule_utils.html" as utils %}
+
+<div class="main container">
+    <div class="column left">
+        <h2>Водители троллейбусного парка</h2>
+
+        {% if items %}
+            {% for item in items %}
+                {{ utils.render_item(item, routs, schedule, show_form=True, show_amount=False) }}
+            {% endfor %}
+        {% else %}
+            <div class="alert alert-info">
+                Ни один водитель не зарегестрирован
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="column right">
+        <div class="card">
+            <div class="card-header">
+                <h3>Число работающих водителей: {{dr_total}}</h3>
+                <h3> Можно назначить: {{dr_needed}} </h3>
+                <!-- <h3>Маршруты</h3> -->
+                 <a href="{{ url_for('bp_schedule.save_schedule') }}" class="btn btn-success">Сохранить расписание</a>
+                <a href="{{ url_for('bp_schedule.clear_session') }}" class="btn btn-danger">Стереть расписание</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

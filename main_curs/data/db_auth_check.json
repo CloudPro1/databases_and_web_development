@@ -1,0 +1,6 @@
+{
+  "manager": ["auth_bp", "bp_query", "bp_report", "bp_schedule"],
+  "accountant": ["bp_report","auth_bp"],
+  "user": ["auth_bp"],
+  "traffic_controller" : ["bp_query","auth_bp", "bp_schedule"]
+}

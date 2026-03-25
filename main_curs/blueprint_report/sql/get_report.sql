@@ -1,0 +1,1 @@
+SELECT * FROM salary_report WHERE sr_month = (%s) AND sr_year = (%s);

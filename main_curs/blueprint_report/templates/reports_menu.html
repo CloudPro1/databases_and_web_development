@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Работа с отчётами</title>
+    <link rel="stylesheet" href="{{ url_for('bp_report.static', filename='reports_menu.css') }}">
+</head>
+<body>
+    <main>
+        <h2>Бухгалтерия</h2>
+        <div class="report-section">
+            <a href="/reports/accounting/create"><button type="button">Создать отчёт</button></a>
+        </div>
+        <div class="report-section">
+            <a href="/reports/accounting/show" class="button"><button type="button">Просмотреть отчёты</button></a>
+        </div>
+        <a href="/reports" class="back-section">К выбору отчетов</a>
+        <span> | </span>
+        <a href="/" class="back-section">В главное меню</a>
+    </main>
+</body>
+</html>

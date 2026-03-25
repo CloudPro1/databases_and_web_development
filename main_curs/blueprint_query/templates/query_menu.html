@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Menu</title>
+    <link rel="stylesheet" href="{{ url_for('bp_query.static', filename='query_menu.css') }}">
+</head>
+<body>
+<main>
+    <h2>Выбор запроса</h2>
+
+    <div class="query-section">
+        <h3>Отработанные часы</h3>
+        <a href="{{ url_for('bp_query.input_1request') }}">
+            <button type="button">Запрос по фамилии</button>
+        </a>
+    </div>
+
+    <div class="query-section">
+        <h3>Поиск по расписанию</h3>
+        <a href="{{ url_for('bp_query.input_2request') }}">
+            <button type="button">Запрос по дате и маршруту</button>
+        </a>
+    </div>
+
+    <div class="query-section">
+        <h3>Поиск данных о водителе троллейбуса</h3>
+        <a href="{{ url_for('bp_query.input_3request') }}">
+            <button type="button">Запрос по серии троллейбуса</button>
+        </a>
+    </div>
+
+    <a href="{{ url_for('main_menu') }}">В главное меню</a>
+
+</main>
+</body>
+</html>

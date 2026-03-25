@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buses search report</title>
+    <link rel="stylesheet" href="{{url_for('bp_query.static', filename='inputs.css')}}">
+</head>
+<body>
+<main>
+    <h2>Поиск троллейбуса</h2>
+
+    <h3>Введите серию троллейбуса</h3>
+    <form action="{{ url_for('bp_query.result_3_req') }}" method="post">
+        <label for="report_month">Серия:</label>
+        <input type="text" name="report_month" id="report_month" placeholder="Например, XT" required>
+        <input type="submit" value="Поиск">
+    </form>
+
+    <div class="link-container">
+    <a href="/query/">Новый запрос</a>
+        <span> | </span>
+    <a href="{{ url_for('main_menu') }}">В главное меню</a>
+        
+    
+</div>
+</main>
+</body>
+</html>

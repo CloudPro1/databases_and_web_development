@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дата составления расписания</title>
+    <link rel="stylesheet" href="{{ url_for('bp_schedule.static', filename='choose_data.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Выберите дату для составления расписания</h2>
+    
+    <form action="{{url_for('bp_schedule.choose_date')}}" autocomplete="on" method="POST" class="sch_data-form">
+        <input name='schedule_date' type="data" placeholder="Год-месяц-день" required />
+        <input type="submit" value="Составить расписание"/>
+    </form>
+    
+    <div class="button">
+        <!-- <a href="" class="other">К составлению расписания</a> -->
+        <a href="{{url_for('main_menu')}}" class="other">В главное меню</a>
+    </div>
+</div>
+</body>
+</html>

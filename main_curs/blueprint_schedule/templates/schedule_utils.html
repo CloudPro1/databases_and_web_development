@@ -1,0 +1,63 @@
+{% macro render_item(item, routs, schedule, show_amount=False, show_form=False) %}
+<div class="product-card card">
+    <div class="card-body">
+
+        <h3 class="card-title">
+            {{ item.get('name', 'Имя не зарегестрировано') }}
+        </h3>
+
+        
+        <p class="card-text">
+            <form action="{{ url_for('bp_schedule.schedule') }}" method="post">
+                <input type="hidden" name="name" value="{{ item.get('name') }}">
+                <input type="hidden" name="dr_id" value="{{ item.get('dr_id') }}">
+                <label for="{{ item.get('name') }}.route">Маршрут:</label>
+
+                <select name="route_id"
+                        id="route_{{ item.get('name') }}"
+                        required>
+
+                    {% set selected_route = schedule.get(item.get('name'), {}).get('route_id') %}
+                    {% set work_start = schedule.get(item.get('name'), {}).get('work_start') %}
+                    {% set work_finished = schedule.get(item.get('name'), {}).get('work_finished') %}
+
+                    {% if selected_route %}
+                        <option value="{{ selected_route }}" selected>
+                            {{ selected_route }}
+                        </option>
+                    {% else %}
+                        <option value="" disabled selected>
+                            — выберите маршрут —
+                        </option>
+                    {% endif %}
+
+                    {% for route in routs %}
+                        {% if route.get('route_id') != selected_route %}
+                            <option value="{{ route.get('route_id') }}">
+                                {{ route.get('route_id') }}
+                            </option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+
+                <label for="{{ item.get('name') }}.work_start">Время выезда:</label>
+                <input type="time" name="work_start" value="{{ work_start }}"required>
+                
+
+                <label for="{{ item.get('name') }}.work_finished">Время заезда:</label>
+                <input type="time" name="work_finished" value="{{ work_finished }}" required>
+
+                <button type="submit">Подтвердить</button>
+            </form>
+        </p>
+
+         <div style="display: flex; justify-content: flex-end;">
+            <img src="{{ url_for('bp_schedule.static', filename='images/driver.png') }}" 
+            alt="Водитель" 
+            width="180" height="250">
+        </div>
+    </div>
+
+    
+</div>
+{% endmacro %}

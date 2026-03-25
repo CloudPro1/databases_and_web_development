@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Report</title>
+    <link rel="stylesheet" href="{{url_for('bp_query.static', filename='inputs.css')}}">
+</head>
+<body>
+<main>
+    <h2>Отчет по расписанию водителей</h2>
+
+    <h3>Введите параметры поиска</h3>
+    <form action="{{ url_for('bp_query.result_2_req') }}" method="post">
+        <div class="form-group">
+            <label for="route">Маршрут:</label>
+            <input type="text" name="route" id="route" placeholder="Например, r03" required>
+        </div>
+
+        <div class="form-group">
+            <label for="year">Год:</label>
+            <input type="text" name="year" id="year" placeholder="Например, 2024" min="2000" max="2030" required>
+        </div>
+
+        <div class="form-group">
+            <label for="month">Месяц:</label>
+            <input type="text" name="month" id="month" placeholder="Например, 3" min="1" max="12" required>
+        </div>
+
+        <input type="submit" value="Поиск">
+    </form>
+
+    <div class="link-container">
+        <a href="/query/">Новый запрос</a>
+        <span> | </span>
+        <a href="{{ url_for('main_menu') }}">В главное меню</a>
+    </div>
+</main>
+</body>
+</html>

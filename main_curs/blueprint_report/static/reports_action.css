@@ -1,0 +1,106 @@
+        
+                body {
+            font-family: 'Arial', sans-serif;
+            background-color: #AAAAAA;
+            margin: 0;
+            padding: 20px;
+        }
+
+        main {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 100px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        form {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 100px;
+            margin-bottom: 15px;
+        }
+
+        input[type="submit"] {
+            background-color: #000000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #A063b3;
+            transform: scale(1.05);
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #AAAAAA;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        
+        
+        .message {
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+        .success {
+            background-color: rgba(242, 253, 242, 0.9);
+            color: #27ae60; /* Зеленый для успешных сообщений */
+            border: 1px solid #27ae60;
+        }
+        .error {
+            background-color: rgba(253, 242, 242, 0.9);
+            color: #e74c3c; /* Красный для ошибок */
+            border: 1px solid #e74c3c;
+        }
+        span {
+    color: #AAAAAA; 
+}
+
+/* input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+} */

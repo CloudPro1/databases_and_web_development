@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose report</title>
+    <link rel="stylesheet" href="{{ url_for('bp_report.static', filename='reports_menu.css') }}">
+</head>
+<body>
+    <main>
+        <h2>Работа с отчётами</h2>
+        <div class="report-section">
+            <a href="/reports/" class="button"><button type="button">Поездки</button></a>
+        </div>
+        <div class="report-section">
+            <a href="/reports/accounting"><button type="button">Бухгалтерия</button></a>
+        </div>
+        <div class="report-section">
+            <a href="/reports/" class="button"><button type="button">Данные о работниках</button></a>
+        </div>
+        <a href="/" class="back-section">В главное меню</a>
+    </main>
+</body>
+</html>

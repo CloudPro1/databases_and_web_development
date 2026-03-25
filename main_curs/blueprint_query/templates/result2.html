@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ query_title }}</title>
+    <link rel="stylesheet" href="{{url_for('bp_query.static', filename='results.css')}}">
+</head>
+<body>
+<main>
+    <h2>{{ query_title }}</h2>
+
+    {% if bouquets %}
+    <table>
+        <tr>
+            <th>Имя водителя</th>
+            <th>Дата рабочего дня</th>
+        </tr>
+        {% for schedule in bouquets %}
+        <tr>
+            <td>{{ schedule[0] }}</td>
+            <td>{{ schedule[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <div class="no-results">
+        Данные по расписанию не найдены
+    </div>
+    {% endif %}
+
+    <div class="button-container">
+        <a href="/query/input_2_sql">Новый поиск</a>
+        <a href="/query/">Меню запросов</a>
+        <a href="{{ url_for('main_menu') }}">На главную</a>
+    </div>
+</main>
+</body>
+</html>

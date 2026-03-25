@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ошибка!</title>
+    <link rel="stylesheet" href="{{url_for('bp_schedule.static', filename='choose_data.css')}}">
+</head>
+<body>
+<div class="container">
+    <h2>Ошибка!</h2>
+    <hr />
+    <p>{{message}}</p>
+    <div class = "buttons">
+        <div class="exit">
+            <a href="{{url_for('bp_schedule.choose_date')}}" class="other">К выбору даты</a>
+        </div>
+        <div class="exit">
+            <a href="{{url_for('main_menu')}}" class="other">В главное меню</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

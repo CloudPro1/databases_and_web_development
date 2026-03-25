@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ query_title }}</title>
+    <link rel="stylesheet" href="{{url_for('bp_query.static', filename='results.css')}}">
+</head>
+<body>
+<main>
+    <h2>{{ query_title }}</h2>
+
+    {% if bouquets %}
+    <table>
+        <tr>
+            <th>ID водителя</th>
+            <th>Имя водителя</th>
+            <th>Номер троллейбуса</th>
+        </tr>
+        {% for driver in bouquets %}
+        <tr>
+            <td>{{ driver[0] }}</td>
+            <td>{{ driver[1] }}</td>
+            <td class="bus-number">{{ driver[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <div class="no-results">
+        Троллейбусы с указанной серией не найдены
+    </div>
+    {% endif %}
+
+    <div class="button-container">
+        <a href="/query/input_3_sql">Новый поиск</a>
+        <a href="/query/">Меню запросов</a>
+        <a href="{{ url_for('main_menu') }}">На главную</a>
+    </div>
+</main>
+</body>
+</html>
