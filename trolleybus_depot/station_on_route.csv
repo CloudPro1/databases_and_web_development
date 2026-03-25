@@ -1,0 +1,11 @@
+path_id,route_id,st_num
+p1.1,r01,2st
+p1.2,r01,3st
+p1.3,r01,1st
+p1.4,r01,8st
+p2.1,r02,6st
+p2.2,r02,7st
+p2.3,r02,1st
+p2.4,r02,8st
+p3.1,r03,5st
+p3.2,r03,4st
