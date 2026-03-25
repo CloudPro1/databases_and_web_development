@@ -7,13 +7,13 @@
 ------
 Вы можете войти в систему тремя способами: \
 #1 
-login: manager 
+login: manager  \
 password: manager \
 #2
-login: accountant
+login: accountant \
 password: accountant \
 #3
-login: user
-\ password: user 
+login: user \
+password: user 
  
 Для каждого из этих пользователей доступны опреденные разделы сайта, соответсвуя бизнес-модели, подробности в РПЗ.
