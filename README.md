@@ -8,11 +8,11 @@
 Вы можете войти в систему тремя способами: \
 #1 
 login: manager  \
-password: manager \
+password: manager 
 
 #2
 login: accountant \
-password: accountant \
+password: accountant 
 
 #3
 login: user \
